@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "831508625024",
+    "firebase_url": "https://probeis-d2713.firebaseio.com",
+    "project_id": "probeis-d2713",
+    "storage_bucket": "probeis-d2713.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831508625024:android:07d238d04afd5554261865",
+        "android_client_info": {
+          "package_name": "com.ingyso.probeis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831508625024-plj1390pn17eq4o4d2ec23isiodf5ebo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_z8gHruVv0HzLKI5X0c2bc1NQPsIkZaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831508625024-plj1390pn17eq4o4d2ec23isiodf5ebo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

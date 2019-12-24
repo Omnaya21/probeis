@@ -39,14 +39,13 @@ public class IntroActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        /*
         // when this activity is about to be launch we need to check if its opened before or not
         if (restorePrefData()) {
             Intent loginActivity = new Intent(getApplicationContext(),LoginActivity.class );
             startActivity(loginActivity);
             finish();
         }
-        */
+
         setContentView(R.layout.activity_intro);
 
         // hide the action bar

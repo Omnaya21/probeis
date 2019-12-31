@@ -33,10 +33,11 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, usernameText.getText() + ", " + passwordtext.getText(),
                         Toast.LENGTH_SHORT).show();
                 // Si el usuario es para captura de metricas, mostramos la pantalla de captura de metricas.
-                if (usernameText.getText().equals("captura") && passwordtext.getText().equals("captura")) {
+                if (usernameText.getText().toString().equals("captura") &&
+                    passwordtext.getText().toString().equals("captura")) {
                     Toast.makeText(LoginActivity.this, "Abriendo pantalla de Captura",
                             Toast.LENGTH_SHORT).show();
-                    //open main activity
+                    //open capture activity
                     Intent captureActivity = new Intent(getApplicationContext(), CaptureActivity.class);
                     startActivity(captureActivity);
                     // also we need to save a boolean value to storage so next time when the user run the app

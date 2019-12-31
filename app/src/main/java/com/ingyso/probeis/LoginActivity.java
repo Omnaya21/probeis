@@ -30,10 +30,12 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(LoginActivity.this, "Authentication failed.",
-//                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, usernameText.getText() + ", " + passwordtext.getText(),
+                        Toast.LENGTH_SHORT).show();
                 // Si el usuario es para captura de metricas, mostramos la pantalla de captura de metricas.
-                if ((usernameText.getText() == "captura") && (passwordtext.getText() == "captura")) {
+                if (usernameText.getText().equals("captura") && passwordtext.getText().equals("captura")) {
+                    Toast.makeText(LoginActivity.this, "Abriendo pantalla de Captura",
+                            Toast.LENGTH_SHORT).show();
                     //open main activity
                     Intent captureActivity = new Intent(getApplicationContext(), CaptureActivity.class);
                     startActivity(captureActivity);

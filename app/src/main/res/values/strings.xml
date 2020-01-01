@@ -2,7 +2,7 @@
     <string name="app_name">Probeis</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
+    <string name="prompt_email">Email/Usuario</string>
     <string name="prompt_password">Clave</string>
     <string name="action_sign_in">Entrar o Registrarse</string>
     <string name="action_sign_in_short">Entrar</string>

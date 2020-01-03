@@ -72,7 +72,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Potencia de brazo"
+                            android:text="348 Participantes"
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>

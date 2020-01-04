@@ -22,8 +22,8 @@
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
-            app:titleTextColor="@color/grey_300"
-            app:title="Captura de métricas">
+            app:title="Some text"
+            app:titleTextColor="@color/login_button_color">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_id"
@@ -44,23 +44,23 @@
                     android:layout_height="180dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
-                    app:cardCornerRadius="10dp"
-                    android:focusable="true">
+                    app:cardCornerRadius="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="@color/probeis_bright_blue"
                         android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#25252F">
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="96dp"
                             android:layout_height="96dp"
+                            android:contentDescription="TODO"
                             android:padding="0dp"
-                            android:src="@drawable/diamond_white"
-                            android:contentDescription="TODO" />
+                            android:src="@drawable/diamond_black" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -95,7 +95,6 @@
             android:id="@+id/ll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#fcfcfc"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp">
@@ -108,10 +107,9 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
                     android:layout_margin="10dp"
-                    app:cardBackgroundColor="#f5f5f5"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardCornerRadius="10dp"
@@ -120,40 +118,65 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bk1">
 
-                        <ImageView
-                            android:layout_width="96dp"
-                            android:layout_height="96dp"
-                            android:background="@drawable/circlebackgroundpurple"
-                            android:padding="15dp"
-                            android:src="@drawable/ic_jump_black"
-                            android:contentDescription="TODO" />
-
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Flex/Salto"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_margin="10dp"
-                            android:background="@color/grey_300" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:gravity="center"
-                            android:padding="5dp"
-                            android:text="Flexibilidad y salto de longitud"
-                            android:textColor="@android:color/darker_gray" />
+                            android:orientation="horizontal">
 
+                            <ImageView
+                                android:layout_width="96dp"
+                                android:layout_height="96dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/ic_jump_black"
+                                android:contentDescription="TODO" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Flex/Salto"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/grey_300" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Flexibilidad y salto de longitud"
+                                android:textColor="@android:color/darker_gray" />
+
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="160dp"
@@ -168,12 +191,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
+                        android:background="@color/probeis_blue"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="96dp"
                             android:layout_height="96dp"
-                            android:background="@drawable/circlebackgroundpurple"
                             android:padding="15dp"
                             android:src="@drawable/ic_run_black" />
 
@@ -195,6 +218,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
+                            android:background="@color/probeis_bright_blue"
                             android:text="Carrera de 30 y 60 yds"
                             android:textColor="@android:color/darker_gray" />
 

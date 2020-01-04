@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#ffffff</color>
+    <color name="colorAccent">#BF5E5E</color>
 
     <color name="ic_launcher_background">#212121</color>
 
@@ -13,7 +13,7 @@
     <color name="login_button_color">#D81B60</color>
 
 
-    <!-- colors for tab and screent text -->
+    <!-- colors for tab and screen text -->
     <color name="tab_indicator_gray">#c0c0c0</color>
     <color name="intro_title_color">#FFFFFF</color>
     <color name="intro_description_color">#EEEEEE</color>
@@ -21,5 +21,12 @@
     <color name="grey_100">#F5F5F5</color>
     <color name="grey_300">#E0E0E0</color>
     <color name="grey_500">#9E9E9E</color>
+
+    <!-- Probeis Color theme-->
+    <color name="probeis_gray">#F2F2F2</color>
+    <color name="probeis_bright_red">#D92B3A</color>
+    <color name="probeis_bright_blue">#6267D9</color>
+    <color name="probeis_blue">#8488D9</color>
+    <color name="probeis_mute_red">#BF5E5E</color>
 
 </resources>

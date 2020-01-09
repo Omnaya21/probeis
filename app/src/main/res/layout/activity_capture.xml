@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -29,16 +29,30 @@
                 android:id="@+id/toolbar_id"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
                 android:background="#d44b7e"
+                app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clipToPadding="false"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Sede Chihuahua"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="348 Participantes"
+                    android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
 
@@ -49,6 +63,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="48dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -73,7 +88,7 @@
                         android:layout_height="match_parent"
                         android:gravity="left"
                         android:orientation="horizontal"
-                        android:background="@drawable/bk1">
+                        android:background="@drawable/bk1_sm">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -137,7 +152,7 @@
                         android:layout_height="match_parent"
                         android:gravity="left"
                         android:orientation="horizontal"
-                        android:background="@drawable/bk2">
+                        android:background="@drawable/bk2_sm">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -201,7 +216,7 @@
                         android:layout_height="match_parent"
                         android:gravity="left"
                         android:orientation="horizontal"
-                        android:background="@drawable/bk3">
+                        android:background="@drawable/bk3_sm">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -265,7 +280,7 @@
                         android:layout_height="match_parent"
                         android:gravity="left"
                         android:orientation="horizontal"
-                        android:background="@drawable/bk4">
+                        android:background="@drawable/bk4_sm">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -329,7 +344,7 @@
                         android:layout_height="match_parent"
                         android:gravity="left"
                         android:orientation="horizontal"
-                        android:background="@drawable/bk5">
+                        android:background="@drawable/bk5_sm">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -380,37 +395,5 @@
                 </androidx.cardview.widget.CardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_anchor="@+id/appbar"
-        app:layout_anchorGravity="center">
-
-        <ImageView
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:contentDescription="TODO"
-            android:padding="0dp"
-            android:src="@drawable/diamond_black" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Sede Chihuahua"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="348 Participantes"
-            android:textColor="@android:color/darker_gray" />
-
-    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

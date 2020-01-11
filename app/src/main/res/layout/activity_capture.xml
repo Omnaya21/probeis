@@ -22,7 +22,7 @@
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
-            app:title="Some text"
+            app:title="Captura de datos"
             app:titleTextColor="@color/login_button_color">
 
             <androidx.appcompat.widget.Toolbar
@@ -101,7 +101,7 @@
                                 android:layout_height="96dp"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginRight="20dp"
-                                android:src="@drawable/ic_jump_black"
+                                android:src="@drawable/jumpblack"
                                 android:contentDescription="TODO" />
 
                         </LinearLayout>
@@ -165,7 +165,7 @@
                                 android:layout_height="96dp"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginRight="20dp"
-                                android:src="@drawable/ic_run_black"
+                                android:src="@drawable/runyardsblack"
                                 android:contentDescription="TODO" />
 
                         </LinearLayout>
@@ -229,7 +229,7 @@
                                 android:layout_height="96dp"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginRight="20dp"
-                                android:src="@drawable/ic_jump_black"
+                                android:src="@drawable/runblack"
                                 android:contentDescription="TODO" />
 
                         </LinearLayout>
@@ -293,7 +293,7 @@
                                 android:layout_height="96dp"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginRight="20dp"
-                                android:src="@drawable/ic_jump_black"
+                                android:src="@drawable/batterblack"
                                 android:contentDescription="TODO" />
 
                         </LinearLayout>
@@ -357,7 +357,7 @@
                                 android:layout_height="96dp"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginRight="20dp"
-                                android:src="@drawable/ic_jump_black"
+                                android:src="@drawable/ballblack"
                                 android:contentDescription="TODO" />
 
                         </LinearLayout>

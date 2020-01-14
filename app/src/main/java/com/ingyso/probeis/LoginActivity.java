@@ -35,17 +35,22 @@ public class LoginActivity extends AppCompatActivity {
                 // Si el usuario es para captura de metricas, mostramos la pantalla de captura de metricas.
                 if (usernameText.getText().toString().equals("captura") &&
                     passwordtext.getText().toString().equals("captura")) {
-                    Toast.makeText(LoginActivity.this, "Abriendo pantalla de Captura",
-                            Toast.LENGTH_SHORT).show();
+
                     //open capture activity
                     Intent captureActivity = new Intent(getApplicationContext(), CaptureActivity.class);
                     startActivity(captureActivity);
-                    // also we need to save a boolean value to storage so next time when the user run the app
-                    // we could know that he is already checked the intro screen activity
-                    // i'm going to use shared preferences to that process
-                    //savePrefsData();
+
                     finish();
                 }
+                else if (usernameText.getText().toString().equals("demo") &&
+                        passwordtext.getText().toString().equals("demo")) {
+
+                    //open user activity
+                    Intent userActivity = new Intent(getApplicationContext(), ProfileActivity.class);
+                    startActivity(userActivity);
+                    finish();
+                }
+
             }
         });
     }

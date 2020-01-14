@@ -9,27 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".EditUserInfoActivity"></activity>
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".CaptureMetricActivity" />
         <activity
             android:name=".CaptureActivity"
-            android:theme="@style/ProbeisTheme">
-
-        </activity>
+            android:theme="@style/ProbeisTheme"></activity>
         <activity
             android:name=".LoginActivity"
             android:theme="@style/ProbeisTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".IntroActivity"></activity>
+        <activity android:name=".IntroActivity" />
     </application>
 
 </manifest>

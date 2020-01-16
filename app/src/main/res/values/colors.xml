@@ -29,4 +29,12 @@
     <color name="probeis_blue">#8488D9</color>
     <color name="probeis_mute_red">#BF5E5E</color>
 
+    <!-- Probeis Red variations theme -->
+    <color name="probeis_background">#F2F2F2</color>
+    <color name="probeis_matte">#ECE3E3</color>
+    <color name="probeis_matte_dark">#B89FA1</color>
+    <color name="probeis_primary_dark">#522338</color>
+    <color name="probeis_primary">#881F41</color>
+    <color name="probeis_accent">#d4145a</color>
+
 </resources>

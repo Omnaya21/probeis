@@ -45,9 +45,9 @@ public class LoginActivity extends AppCompatActivity {
                 else if (usernameText.getText().toString().equals("demo") &&
                         passwordtext.getText().toString().equals("demo")) {
 
-                    //open user activity
-                    Intent userActivity = new Intent(getApplicationContext(), ProfileActivity.class);
-                    startActivity(userActivity);
+                    //open player activity
+                    Intent playerActivity = new Intent(getApplicationContext(), MainPlayerActivity.class);
+                    startActivity(playerActivity);
                     finish();
                 }
 

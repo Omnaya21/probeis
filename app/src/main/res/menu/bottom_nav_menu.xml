@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_home"
+        android:id="@+id/action_logout"
         android:enabled="true"
-        android:icon="@drawable/ic_action_home"
-        android:title="Home"
+        android:icon="@drawable/ic_exit_to_app_white_24dp"
+        android:title="Salir"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_metrics"
         android:enabled="true"
         android:icon="@drawable/ic_action_metrics"
-        android:title="Metrics"
+        android:title="Metricas"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_events"
         android:enabled="true"
         android:icon="@drawable/ic_action_events"
-        android:title="Events"
+        android:title="Eventos"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_menu"

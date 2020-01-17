@@ -293,7 +293,7 @@
                                 android:layout_height="96dp"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginRight="20dp"
-                                android:src="@drawable/batterblack"
+                                android:src="@drawable/battertee"
                                 android:contentDescription="TODO" />
 
                         </LinearLayout>

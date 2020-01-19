@@ -20,9 +20,9 @@
         android:title="Eventos"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_menu"
+        android:id="@+id/action_pictures"
         android:enabled="true"
-        android:icon="@drawable/ic_action_menu"
-        android:title="Menu"
+        android:icon="@drawable/ic_action_pictures"
+        android:title="Fotos"
         app:showAsAction="ifRoom" />
 </menu>

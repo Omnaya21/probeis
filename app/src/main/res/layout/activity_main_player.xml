@@ -7,8 +7,8 @@
     tools:context=".MainPlayerActivity">
 
     <View
-        android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_width="512dp"
+        android:layout_height="270dp"
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
@@ -19,21 +19,21 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/playerPicture"
-        android:layout_width="71dp"
-        android:layout_height="71dp"
+        android:layout_width="70dp"
+        android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_gravity="center_horizontal"
         android:elevation="10dp"
-        app:cardCornerRadius="180dp">
+        app:cardCornerRadius="35dp">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/player_picture" />
+            android:src="@drawable/profile_picture" />
 
     </androidx.cardview.widget.CardView>
 
@@ -95,10 +95,12 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/ic_show_chart_black_24dp"/>
+                    android:padding="8dp"
+                    android:background="@drawable/btn_gradient_blue"
+                    android:src="@drawable/ic_show_chart_white_24dp"/>
 
                 <TextView
-                    android:id="@+id/metrics2"
+                    android:id="@+id/metrics_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Métricas"
@@ -118,10 +120,12 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/ic_event_available_black_24dp"/>
+                    android:padding="8dp"
+                    android:background="@drawable/btn_gradient_blue"
+                    android:src="@drawable/ic_event_available_white_24dp"/>
 
                 <TextView
-                    android:id="@+id/events2"
+                    android:id="@+id/events_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Eventos"
@@ -141,13 +145,15 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/ic_menu_black_24dp"/>
+                    android:padding="8dp"
+                    android:background="@drawable/btn_gradient_blue"
+                    android:src="@drawable/ic_portrait_white_24dp"/>
 
                 <TextView
-                    android:id="@+id/menu2"
+                    android:id="@+id/pictures_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Menu"
+                    android:text="Fotos"
                     android:textColor="@color/probeis_primary_dark"
                     android:textSize="16sp" />
 
@@ -357,7 +363,12 @@
             app:backgroundTint="@color/probeis_primary"
             app:fabAlignmentMode="end"
             app:buttonGravity="bottom|top"
-            app:navigationIcon="@drawable/ic_action_menu"/>
+
+            style="@style/Widget.MaterialComponents.BottomAppBar"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="10dp"
+            app:fabCradleVerticalOffset="5dp"
+            app:hideOnScroll="true"/>
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

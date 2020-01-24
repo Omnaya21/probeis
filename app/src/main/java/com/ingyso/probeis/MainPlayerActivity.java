@@ -42,7 +42,7 @@ public class MainPlayerActivity extends AppCompatActivity {
 
         /*
         bottomAppBar = findViewById(R.id.bottom_app_bar);
-        bottomAppBar.replaceMenu(R.menu.bottom_nav_menu);
+        bottomAppBar.replaceMenu(R.menu.bottom_nav_menu);git
         bottomAppBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {

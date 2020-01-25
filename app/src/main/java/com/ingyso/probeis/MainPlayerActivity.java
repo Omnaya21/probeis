@@ -175,4 +175,11 @@ public class MainPlayerActivity extends AppCompatActivity {
         AlertDialog alertDialog=dialog.create();
         alertDialog.show();
     }
+
+
+    public void openMedia(View view) {
+
+        Intent mediaActivity = new Intent(getApplicationContext(), MediaActivity.class);
+        startActivity(mediaActivity);
+    }
 }

@@ -7,6 +7,13 @@
     android:accessibilityPaneTitle="Media"
     tools:context=".MediaActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/media_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"

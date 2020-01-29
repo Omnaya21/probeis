@@ -68,6 +68,8 @@ public class MainPlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainPlayerActivity.this, "FAB Clicked.", Toast.LENGTH_SHORT).show();
+                Intent notificationIntent = new Intent(getApplicationContext(), Notification.class);
+                startActivity(notificationIntent);
             }
         });
     }

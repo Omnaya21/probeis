@@ -9,10 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".MetricsActivity" />
-        <activity android:name=".EventsActivity" />
-        <activity android:name=".MediaActivity" />
+        <activity android:name=".Notification"
+            android:label="Notificacion"/>
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".MetricsActivity"
+            android:parentActivityName=".MainPlayerActivity"
+            android:label="Métricas"/>
+        <activity
+            android:name=".EventsActivity"
+            android:parentActivityName=".MainPlayerActivity"
+            android:label="Eventos"/>
+        <activity
+            android:name=".MediaActivity"
+            android:parentActivityName=".MainPlayerActivity"
+            android:label="Media"/>
         <activity android:name=".SupportActivity" />
         <activity
             android:name=".MainPlayerActivity"

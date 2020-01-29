@@ -25,11 +25,11 @@
                 android:padding="10dp">
 
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/event_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Metric Name"
+                    android:text="Event Name"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@color/probeis_background"
@@ -38,7 +38,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/event_image"
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
                 android:layout_gravity="center_horizontal"
@@ -49,27 +49,27 @@
                 android:layout_marginTop="10dp"/>
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/event_description"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="Description"
-                android:layout_below="@id/image"
+                android:layout_below="@id/event_image"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:layout_marginTop="10dp"/>
 
             <TextView
-                android:id="@+id/date"
+                android:id="@+id/event_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Metric Name"
+                android:text="Event Date"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_centerHorizontal="true"
                 android:gravity="center_horizontal"
-                android:layout_below="@id/description"/>
+                android:layout_below="@id/event_description"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

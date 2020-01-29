@@ -184,4 +184,16 @@ public class MainPlayerActivity extends AppCompatActivity {
         Intent mediaActivity = new Intent(getApplicationContext(), MediaActivity.class);
         startActivity(mediaActivity);
     }
+
+    public void openMetrics(View view) {
+
+        Intent metricsActivity = new Intent(getApplicationContext(), MetricsActivity.class);
+        startActivity(metricsActivity);
+    }
+
+    public void openEvents(View view) {
+
+        Intent eventsActivity = new Intent(getApplicationContext(), EventsActivity.class);
+        startActivity(eventsActivity);
+    }
 }

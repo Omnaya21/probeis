@@ -35,4 +35,6 @@
     <color name="probeis_primary">#881F41</color>
     <color name="probeis_accent">#d4145a</color>
 
+    <color name="black_overlay">#66000000</color>
+
 </resources>

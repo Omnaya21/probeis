@@ -4,26 +4,27 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/appicon"
+        android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Notification"
-            android:label="Notificacion"/>
+        <activity
+            android:name=".Notification"
+            android:label="Notificacion" />
         <activity android:name=".SettingsActivity" />
         <activity
             android:name=".MetricsActivity"
-            android:parentActivityName=".MainPlayerActivity"
-            android:label="Métricas"/>
+            android:label="Métricas"
+            android:parentActivityName=".MainPlayerActivity" />
         <activity
             android:name=".EventsActivity"
-            android:parentActivityName=".MainPlayerActivity"
-            android:label="Eventos"/>
+            android:label="Eventos"
+            android:parentActivityName=".MainPlayerActivity" />
         <activity
             android:name=".MediaActivity"
-            android:parentActivityName=".MainPlayerActivity"
-            android:label="Media"/>
+            android:label="Media"
+            android:parentActivityName=".MainPlayerActivity" />
         <activity android:name=".SupportActivity" />
         <activity
             android:name=".MainPlayerActivity"

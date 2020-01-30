@@ -98,4 +98,8 @@
     <string name="desc3">Eventos para identificar jugadore spotenciales a nivel nacional ya sea para desarrollarlos mas o acercarlos a equipos profesionales.</string>
     <string name="desc4">Escuelas de desarrollo de jugadores desde temprana edad para que obtengan el nivel necesario para jugar en grandes ligas.</string>
     <string name="desc5">Showcase de jugadores para que muestren sus habilidades y potencial ante scouts de grandes ligas.</string>
+
+    <string name="title_activity_splash">Splash</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

@@ -4,11 +4,26 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
         android:icon="@drawable/appicon"
+        android:label="@string/app_name"
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".Splash"
+            android:theme="@style/AppTheme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/ProbeisTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Notification"
             android:label="Notificacion" />
@@ -35,18 +50,6 @@
         <activity
             android:name=".CaptureActivity"
             android:theme="@style/ProbeisTheme" />
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/ProbeisTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".IntroActivity" />
     </application>
 

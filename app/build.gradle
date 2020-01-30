@@ -50,6 +50,9 @@ dependencies {
     // Firebase UI
     // Used in FirebaseUIActivity.
     //implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'

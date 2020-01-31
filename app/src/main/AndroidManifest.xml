@@ -9,9 +9,10 @@
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SignUp"></activity>
         <activity
             android:name=".EntryActivity"
-            android:theme="@style/AppTheme.SplashScreen"/>
+            android:theme="@style/AppTheme.SplashScreen" />
         <activity
             android:name=".Splash"
             android:theme="@style/AppTheme.SplashScreen">

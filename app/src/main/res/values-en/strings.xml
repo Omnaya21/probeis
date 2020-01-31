@@ -79,5 +79,5 @@
     <string name="prompt_email">Email/Username</string>
     <string name="signup">Sign Up</string>
     <string name="forgot">Forgot your password?</string>
-    <string name="remember_me">Remeber me</string>
+    <string name="remember_me">Remember me</string>
 </resources>

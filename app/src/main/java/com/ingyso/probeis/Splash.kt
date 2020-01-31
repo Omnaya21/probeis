@@ -21,8 +21,8 @@ class Splash : AppCompatActivity() {
     }
 
     private fun goToMainActivity() {
-        val introActivityIntent = Intent(applicationContext, IntroActivity::class.java)
-        startActivity(introActivityIntent)
+        val entryActivityIntent = Intent(applicationContext, EntryActivity::class.java)
+        startActivity(entryActivityIntent)
         finish()
     }
 }

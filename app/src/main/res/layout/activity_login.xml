@@ -75,6 +75,7 @@
             android:selectAllOnFocus="true"
             android:textColor="@color/probeis_background"
             android:textColorHint="@color/probeis_matte"
+            android:cursorVisible="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

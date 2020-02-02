@@ -10,7 +10,7 @@
     <item
         android:id="@+id/action_metrics"
         android:enabled="true"
-        android:icon="@drawable/ic_action_metrics"
+        android:icon="@drawable/ic_show_chart_white_24dp"
         android:title="Metricas"
         app:showAsAction="ifRoom" />
     <item

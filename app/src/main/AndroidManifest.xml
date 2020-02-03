@@ -4,12 +4,50 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/appicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainPlayerActivity"
+        <activity android:name=".SignUp"></activity>
+        <activity
+            android:name=".EntryActivity"
+            android:theme="@style/AppTheme.SplashScreen" />
+        <activity
+            android:name=".Splash"
+            android:theme="@style/AppTheme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/ProbeisTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Notification"
+            android:label="Notificacion" />
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".MetricsActivity"
+            android:label="Métricas"
+            android:parentActivityName=".MainPlayerActivity" />
+        <activity
+            android:name=".EventsActivity"
+            android:label="Eventos"
+            android:parentActivityName=".MainPlayerActivity" />
+        <activity
+            android:name=".MediaActivity"
+            android:label="Media"
+            android:parentActivityName=".MainPlayerActivity" />
+        <activity android:name=".SupportActivity" />
+        <activity
+            android:name=".MainPlayerActivity"
             android:theme="@style/ProbeisTheme" />
         <activity android:name=".EditUserInfoActivity" />
         <activity android:name=".ProfileActivity" />
@@ -17,18 +55,6 @@
         <activity
             android:name=".CaptureActivity"
             android:theme="@style/ProbeisTheme" />
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/ProbeisTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".IntroActivity" />
     </application>
 

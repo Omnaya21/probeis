@@ -54,4 +54,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void goBack(View view) {
+        Intent parentIntent = new Intent(getApplicationContext(), EntryActivity.class);
+        startActivity(parentIntent);
+        finish();
+    }
 }

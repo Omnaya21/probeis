@@ -18,4 +18,9 @@ public class EntryActivity extends AppCompatActivity {
         Intent loginIntent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(loginIntent);
     }
+
+    public void showSignup(View view) {
+        Intent signupIntent = new Intent(getApplicationContext(), SignUp.class);
+        startActivity(signupIntent);
+    }
 }

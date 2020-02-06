@@ -43,10 +43,11 @@ public class RecyclerViewMetricAdapter extends RecyclerView.Adapter<RecyclerView
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Glide.with(mContext)
+        /*Glide.with(mContext)
                 .asBitmap()
                 .load(mImageUrls.get(position))
-                .into(holder.image);
+                .into(holder.image);*/
+        holder.image.setImageResource(R.drawable.metric_exit_velocity);
 
         holder.title.setText(mTitles.get(position));
         holder.description.setText(mDescriptions.get(position));

@@ -36,7 +36,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".2" />
+        app:layout_constraintGuide_begin="139dp" />
 
     <LinearLayout
         android:id="@+id/emailLayout"
@@ -338,7 +338,7 @@
         android:layout_marginEnd="48dp"
         android:background="@drawable/btn_gradient_red"
         android:enabled="true"
-        android:text="@string/action_intro"
+        android:text="@string/signup"
         android:textColor="@color/probeis_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

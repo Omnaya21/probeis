@@ -36,7 +36,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="139dp" />
+        app:layout_constraintGuide_begin="130dp" />
 
     <LinearLayout
         android:id="@+id/emailLayout"
@@ -50,11 +50,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineTop">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_mail_white_24dp"
-            android:layout_marginEnd="8dp"/>
 
         <EditText
             android:id="@+id/email"
@@ -62,6 +57,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/cardview_light_background"
             android:hint="@string/hint_email"
+            android:drawableLeft="@drawable/ic_mail_white_24dp"
             android:inputType="textEmailAddress"
             android:selectAllOnFocus="true"
             android:textColor="@color/probeis_background"
@@ -81,12 +77,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailLayout">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_person_white_24dp"
-            android:layout_marginEnd="8dp"/>
-
         <EditText
             android:id="@+id/givenName"
             android:layout_width="match_parent"
@@ -94,6 +84,7 @@
             android:hint="@string/hint_name"
             android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionDone"
+            android:drawableLeft="@drawable/ic_person_white_24dp"
             android:inputType="textPassword"
             android:selectAllOnFocus="true"
             android:textColor="@color/probeis_background"
@@ -113,12 +104,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/givenNameLayout">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_person_white_24dp"
-            android:layout_marginEnd="8dp"/>
 
         <EditText
             android:id="@+id/lastName"
@@ -146,12 +131,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastNameLayout">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_person_white_24dp"
-            android:layout_marginEnd="8dp"/>
-
         <EditText
             android:id="@+id/otherName"
             android:layout_width="match_parent"
@@ -178,12 +157,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/otherNameLayout">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_lock_white_24dp"
-            android:layout_marginEnd="8dp"/>
-
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
@@ -191,6 +164,7 @@
             android:hint="@string/prompt_password"
             android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionDone"
+            android:drawableLeft="@drawable/ic_lock_white_24dp"
             android:inputType="textPassword"
             android:selectAllOnFocus="true"
             android:textColor="@color/probeis_background"
@@ -209,12 +183,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordLayout">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_lock_white_24dp"
-            android:layout_marginEnd="8dp"/>
 
         <EditText
             android:id="@+id/retypePassword"

@@ -101,7 +101,7 @@
 
     <string name="title_activity_splash" translatable="false">Splash</string>
     <string name="signup">Registro</string>
-    <string name="forgot">¿Olvidó su clave?</string>
+    <string name="forgot">¿Olvidaste tu clave?</string>
     <string name="remember_me">Recordarme</string>
     <string name="hint_name">Nombre</string>
     <string name="hint_last_name">Apellido paterno</string>
@@ -109,4 +109,6 @@
     <string name="hint_retype_password">Volver a teclear clave</string>
     <string name="hint_gender">Sexo</string>
     <string name="hint_birthday">Fecha de nacimiento</string>
+    <string name="not_signed_up_label">No estas registrado?</string>
+    <string name="signup_action">Registrate</string>
 </resources>

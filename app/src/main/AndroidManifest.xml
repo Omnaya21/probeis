@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SignUp"
-            android:theme="@style/FullscreenTheme"/>
+            android:theme="@style/AppTheme.SplashScreen"/>
         <activity
             android:name=".EntryActivity"
             android:theme="@style/AppTheme.SplashScreen" />

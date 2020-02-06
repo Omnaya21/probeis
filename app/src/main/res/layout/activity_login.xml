@@ -108,7 +108,7 @@
             android:text="@string/forgot"
             android:textColor="@color/probeis_matte"
             android:textSize="14sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <Button
@@ -123,26 +123,57 @@
         android:enabled="true"
         android:text="@string/sign_in"
         android:textAllCaps="false"
-        android:textSize="25sp"
         android:textColor="@color/probeis_matte"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/extras" />
 
+    <LinearLayout
+        android:id="@+id/registerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/loginButton">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/not_signed_up_label"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sgnup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup_action"
+            android:textColor="@color/probeis_matte"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/intro"
-        android:layout_width="wrap_content"
+        android:layout_width="194dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="32dp"
-        android:minWidth="120dp"
         android:background="@drawable/btn_gradient_white"
         android:enabled="false"
+        android:minWidth="120dp"
         android:text="Google"
+        android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

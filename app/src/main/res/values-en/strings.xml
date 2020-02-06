@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_intro">Intro</string>
-    <string name="action_sign_in">Enter</string>
     <string name="action_sign_in_short">Signin</string>
     <string name="auth_failed">Authentication failed</string>
     <string name="create_account">Create Account</string>
@@ -80,4 +79,11 @@
     <string name="signup">Sign Up</string>
     <string name="forgot">Forgot your password?</string>
     <string name="remember_me">Remember me</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="hint_birthday">Birthday</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_last_name">Lastname</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_other_name">Othername</string>
+    <string name="hint_retype_password">Retype Password</string>
 </resources>

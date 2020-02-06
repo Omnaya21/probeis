@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignUp"></activity>
+        <activity
+            android:name=".SignUp"
+            android:theme="@style/FullscreenTheme"/>
         <activity
             android:name=".EntryActivity"
             android:theme="@style/AppTheme.SplashScreen" />
@@ -24,7 +26,7 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/ProbeisTheme">
+            android:theme="@style/AppTheme.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>

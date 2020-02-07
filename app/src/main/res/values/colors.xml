@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#BF5E5E</color>
 
+    <color name="translucent_background">#64000000</color>
+    <color name="cursor_color">#FFFFFF</color>
+
     <!-- colors for button style -->
     <color name="gradient_start_color">#4c84ff</color>
     <color name="gradient_end_color">#18a3fe</color>

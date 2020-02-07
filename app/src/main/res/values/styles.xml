@@ -37,6 +37,22 @@
     <!-- Light EditTexts -->
     <style name="ThemeOverlay.MyLightEditText" parent="ThemeOverlay.AppCompat.Dark" />
 
+    <style name="EditField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/background_editview</item>
+        <item name="android:textCursorDrawable">@drawable/edit_cursor</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:textColor">@color/probeis_background</item>
+        <item name="android:textColorHint">@null</item>
+    </style>
+
     <style name="ThemeOverlay.MyTextDetail" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

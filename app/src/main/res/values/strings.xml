@@ -87,7 +87,7 @@
     <string name="action_intro">Intro</string>
 
     <string name="heading1">¿Que es Probeis?</string>
-    <string name="heading2"></string>
+    <string name="heading2" translatable="false"></string>
     <string name="heading3">Detección de Talento</string>
     <string name="heading4">Escuelas Regionales</string>
     <string name="heading5">Liga de Prospectos</string>
@@ -110,5 +110,13 @@
     <string name="hint_gender">Sexo</string>
     <string name="hint_birthday">Fecha de nacimiento</string>
     <string name="not_signed_up_label">No estas registrado?</string>
-    <string name="signup_action">Registrate</string>
+    <string name="signup_action">Regístrate aquí</string>
+
+    <string name="gender_prompt">Seleccione una opción</string>
+    <string-array name="gender_labels">
+        <item>@string/gender_male</item>
+        <item>@string/gender_female</item>
+    </string-array>
+    <string name="gender_male">Masculino</string>
+    <string name="gender_female">Femenino</string>
 </resources>

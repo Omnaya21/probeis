@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -37,151 +37,193 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="130dp" />
+        app:layout_constraintGuide_begin="230dp" />
 
-    <EditText
-        android:id="@+id/email"
-        style="@style/EditField"
-        android:drawableLeft="@drawable/ic_mail_white_24dp"
-        android:hint="@string/hint_email"
-        android:inputType="textEmailAddress"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+        app:layout_constraintTop_toTopOf="@id/guidelineTop">
 
-    <EditText
-        android:id="@+id/givenName"
-        style="@style/EditField"
-        android:drawableStart="@drawable/ic_person_white_24dp"
-        android:hint="@string/hint_name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical">
 
+            <EditText
+                android:id="@+id/email"
+                style="@style/EditField"
+                android:drawableLeft="@drawable/ic_mail_white_24dp"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/lastName"
-        style="@style/EditField"
-        android:hint="@string/hint_last_name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/givenName" />
+            <EditText
+                android:id="@+id/givenName"
+                style="@style/EditField"
+                android:drawableStart="@drawable/ic_person_white_24dp"
+                android:hint="@string/hint_name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
 
-    <EditText
-        android:id="@+id/otherName"
-        style="@style/EditField"
-        android:hint="@string/hint_other_name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+            <EditText
+                android:id="@+id/lastName"
+                style="@style/EditField"
+                android:hint="@string/hint_last_name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/givenName" />
 
-    <EditText
-        android:id="@+id/password"
-        style="@style/EditField"
-        android:drawableLeft="@drawable/ic_lock_white_24dp"
-        android:hint="@string/prompt_password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otherName" />
+            <EditText
+                android:id="@+id/otherName"
+                style="@style/EditField"
+                android:drawableLeft="@drawable/ic_person_white_24dp"
+                android:hint="@string/hint_other_name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastName" />
 
-    <EditText
-        android:id="@+id/retypePassword"
-        style="@style/EditField"
-        android:hint="@string/hint_retype_password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+            <EditText
+                android:id="@+id/password"
+                style="@style/EditField"
+                android:drawableLeft="@drawable/ic_lock_white_24dp"
+                android:hint="@string/prompt_password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/otherName" />
 
-    <EditText
-        android:id="@+id/gender"
-        style="@style/EditField"
-        android:hint="@string/hint_gender"
-        android:drawableLeft="@drawable/ic_person_white_24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/retypePassword" />
+            <EditText
+                android:id="@+id/retypePassword"
+                style="@style/EditField"
+                android:hint="@string/hint_retype_password"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
 
-        <EditText
-            android:id="@+id/birthday"
-            style="@style/EditField"
-            android:hint="@string/hint_birthday"
-            android:drawableLeft="@drawable/ic_event_available_white_24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gender" />
+            <LinearLayout
+                android:id="@+id/gender_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingStart="24dp">
 
-    <LinearLayout
-        android:id="@+id/extras"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="8dp"
-        android:paddingBottom="5dp"
-        app:layout_constraintEnd_toEndOf="@id/birthday"
-        app:layout_constraintStart_toStartOf="@id/birthday"
-        app:layout_constraintTop_toBottomOf="@+id/birthday">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_gender"
+                    android:textColor="@color/probeis_matte"
+                    android:textSize="18dp" />
 
-        <CheckBox
-            android:id="@+id/show_hide_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/remember_me"
-            android:textColor="@color/probeis_matte"
-            android:textSize="14sp" />
+                <Spinner
+                    android:id="@+id/gender_spinner"
+                    style="@style/EditField"
+                    android:hint="@string/hint_gender"
+                    android:entries="@array/gender_labels"
+                    android:prompt="@string/gender_prompt"/>
 
-        <TextView
-            android:id="@+id/forgot_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="end"
-            android:padding="5dp"
-            android:text="@string/forgot"
-            android:textColor="@color/probeis_matte"
-            android:textSize="14sp" />
-    </LinearLayout>
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="194dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/btn_gradient_red"
-        android:enabled="true"
-        android:text="@string/signup"
-        android:textAllCaps="false"
-        android:textColor="@color/probeis_background"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/googleButton"/>
+            <EditText
+                android:id="@+id/birthday"
+                style="@style/EditField"
+                android:drawableStart="@drawable/ic_event_available_white_24dp"
+                android:hint="@string/hint_birthday"
+                android:onClick="selectDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender_layout" />
 
-    <Button
-        android:id="@+id/googleButton"
-        android:layout_width="194dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/btn_gradient_white"
-        android:enabled="false"
-        android:text="@string/action_sign_in_google"
-        android:textAllCaps="false"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_gradient_white"
+                android:text="@string/hint_birthday"
+                android:drawableLeft="@drawable/ic_event_available_black_24dp"
+                android:drawablePadding="8dp"
+                android:paddingStart="8dp"
+                android:onClick="selectDate"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/extras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toEndOf="@id/birthday"
+                app:layout_constraintStart_toStartOf="@id/birthday"
+                app:layout_constraintTop_toBottomOf="@+id/birthday">
+
+                <CheckBox
+                    android:id="@+id/show_hide_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/remember_me"
+                    android:textColor="@color/probeis_matte"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:padding="5dp"
+                    android:text="@string/forgot"
+                    android:textColor="@color/probeis_matte"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="194dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_gradient_red"
+                android:enabled="true"
+                android:text="@string/signup"
+                android:textAllCaps="false"
+                android:textColor="@color/probeis_background"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toTopOf="@id/googleButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/googleButton"
+                android:layout_width="194dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_gradient_white"
+                android:enabled="false"
+                android:text="@string/action_sign_in_google"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

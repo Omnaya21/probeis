@@ -86,4 +86,9 @@
     <string name="hint_name">Name</string>
     <string name="hint_other_name">Othername</string>
     <string name="hint_retype_password">Retype Password</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_prompt">Select an option</string>
+    <string name="not_signed_up_label">Not registered?</string>
+    <string name="signup_action">Sign Up Now</string>
 </resources>

@@ -12,7 +12,7 @@
         <activity
             android:name=".SignUp"
             android:theme="@style/AppTheme.SplashScreen"/>
-        <activity
+                <activity
             android:name=".EntryActivity"
             android:theme="@style/AppTheme.SplashScreen" />
         <activity

@@ -3,9 +3,11 @@ package com.ingyso.probeis;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -16,6 +18,7 @@ import java.util.List;
 public class SignUp extends AppCompatActivity {
     private Spinner genderSpinner;
     private Button signUp;
+    private String[] genderLabels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,13 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void addListenerOnSpinnerItemSelection() {
+        Resources res = getResources();
+        genderLabels = res.getStringArray(R.array.gender_labels);
         genderSpinner = findViewById(R.id.gender_spinner);
+        ArrayAdapter<String> genderArrayAdapter = new ArrayAdapter<String>(
+                this, R.layout.layout_spinner, genderLabels);
+        genderArrayAdapter.setDropDownViewResource(R.layout.layout_spinner_dropdown);
+        genderSpinner.setAdapter(genderArrayAdapter);
         genderSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

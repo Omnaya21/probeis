@@ -126,7 +126,6 @@
                 <Spinner
                     android:id="@+id/gender_spinner"
                     style="@style/EditField"
-                    android:drawableStart="@drawable/ic_person_white_24dp"
                     android:hint="@string/hint_gender"
                     android:entries="@array/gender_labels"
                     android:prompt="@string/gender_prompt"/>

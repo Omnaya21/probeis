@@ -110,6 +110,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/password" />
 
             <LinearLayout
+                android:id="@+id/gender_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -135,12 +136,22 @@
             <EditText
                 android:id="@+id/birthday"
                 style="@style/EditField"
-                android:drawableLeft="@drawable/ic_event_available_white_24dp"
+                android:drawableStart="@drawable/ic_event_available_white_24dp"
                 android:hint="@string/hint_birthday"
-                android:inputType="date"
+                android:onClick="selectDate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gender" />
+                app:layout_constraintTop_toBottomOf="@+id/gender_layout" />
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_gradient_white"
+                android:text="@string/hint_birthday"
+                android:drawableLeft="@drawable/ic_event_available_black_24dp"
+                android:drawablePadding="8dp"
+                android:paddingStart="8dp"
+                android:onClick="selectDate"/>
 
             <LinearLayout
                 android:id="@+id/extras"

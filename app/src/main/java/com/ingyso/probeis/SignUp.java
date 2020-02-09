@@ -20,10 +20,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class SignUp extends AppCompatActivity {
-    private Spinner genderSpinner;
-    private Button signUp;
     private EditText birthday;
-    private String[] genderLabels;
 
     private Calendar calendar;
     private DatePickerDialog dateDialog;
@@ -33,35 +30,8 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        // Spinner Setup
-        addListenerOnSpinnerItemSelection();
-
         // Calendar setup
         birthday = findViewById(R.id.birthday);
-
-    }
-
-    public void addListenerOnSpinnerItemSelection() {
-        Resources res = getResources();
-        genderLabels = res.getStringArray(R.array.gender_labels);
-        genderSpinner = findViewById(R.id.gender_spinner);
-        ArrayAdapter<String> genderArrayAdapter = new ArrayAdapter<String>(
-                this, R.layout.layout_spinner, genderLabels);
-        genderArrayAdapter.setDropDownViewResource(R.layout.layout_spinner_dropdown);
-        genderSpinner.setAdapter(genderArrayAdapter);
-        genderSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(parent.getContext(),
-                        "OnItemSelectedListener: " + parent.getItemAtPosition(position).toString(),
-                        Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
     }
 
     public void goBack(View view) {
@@ -76,12 +46,14 @@ public class SignUp extends AppCompatActivity {
         int month = calendar.get(Calendar.MONTH);
         int year = calendar.get(Calendar.YEAR);
 
+        Toast.makeText(this, "Date: " + day + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
+
         dateDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int mYear, int mMonth, int mDayOfMonth) {
                 birthday.setText(mDayOfMonth + "/" + (mMonth + 1) + "/" + mYear);
             }
-        }, day, month, year);
+        }, year, month, day);
         dateDialog.show();
     }
 }

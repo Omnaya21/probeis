@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".LoginActivity">
+    tools:context=".SignUp">
 
     <ImageView
         android:id="@+id/backArrow"
@@ -74,6 +74,7 @@
             <EditText
                 android:id="@+id/lastName"
                 style="@style/EditField"
+                android:drawableStart="@drawable/ic_person_white_24dp"
                 android:hint="@string/hint_last_name"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +104,7 @@
             <EditText
                 android:id="@+id/retypePassword"
                 style="@style/EditField"
+                android:drawableStart="@drawable/ic_lock_white_24dp"
                 android:hint="@string/hint_retype_password"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -110,81 +112,93 @@
                 app:layout_constraintTop_toBottomOf="@+id/password" />
 
             <LinearLayout
-                android:id="@+id/gender_layout"
+                android:id="@+id/birthdayLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal"
-                android:gravity="center"
-                android:paddingStart="24dp">
+                android:paddingEnd="24dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/birthday"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/hint_gender"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/background_editview"
+                    android:drawableLeft="@drawable/ic_event_available_white_24dp"
+                    android:drawablePadding="8dp"
+                    android:enabled="false"
+                    android:hint="@string/hint_birthday"
+                    android:padding="8dp"
                     android:textColor="@color/probeis_matte"
-                    android:textSize="18dp" />
+                    android:textColorHint="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gender_layout_radio" />
 
-                <Spinner
-                    android:id="@+id/gender_spinner"
-                    style="@style/EditField"
-                    android:hint="@string/hint_gender"
-                    android:entries="@array/gender_labels"
-                    android:prompt="@string/gender_prompt"/>
-
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/btn_gradient_white"
+                    android:onClick="selectDate"
+                    android:text="@string/text_select"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/birthday"
-                style="@style/EditField"
-                android:drawableStart="@drawable/ic_event_available_white_24dp"
-                android:hint="@string/hint_birthday"
-                android:onClick="selectDate"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gender_layout" />
-
-            <Button
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_gradient_white"
-                android:text="@string/hint_birthday"
-                android:drawableLeft="@drawable/ic_event_available_black_24dp"
-                android:drawablePadding="8dp"
-                android:paddingStart="8dp"
-                android:onClick="selectDate"/>
-
             <LinearLayout
-                android:id="@+id/extras"
+                android:id="@+id/gender_layout_radio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:paddingTop="8dp"
-                android:paddingBottom="5dp"
-                app:layout_constraintEnd_toEndOf="@id/birthday"
-                app:layout_constraintStart_toStartOf="@id/birthday"
-                app:layout_constraintTop_toBottomOf="@+id/birthday">
-
-                <CheckBox
-                    android:id="@+id/show_hide_password"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/remember_me"
-                    android:textColor="@color/probeis_matte"
-                    android:textSize="14sp" />
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp">
 
                 <TextView
-                    android:id="@+id/forgot_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="end"
-                    android:padding="5dp"
-                    android:text="@string/forgot"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/hint_gender"
                     android:textColor="@color/probeis_matte"
-                    android:textSize="14sp" />
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/gender_radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:minWidth="100dp"
+                        android:background="@drawable/background_editview"
+                        android:buttonTint="@color/probeis_blue"
+                        android:checked="true"
+                        android:padding="8dp"
+                        android:text="@string/gender_male"
+                        android:textColor="@color/probeis_matte" />
+
+                    <RadioButton
+                        android:id="@+id/radioFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="100dp"
+                        android:background="@drawable/background_editview"
+                        android:buttonTint="@color/pink"
+                        android:padding="8dp"
+                        android:text="@string/gender_female"
+                        android:textColor="@color/probeis_matte" />
+                </RadioGroup>
+
             </LinearLayout>
 
             <Button
@@ -195,35 +209,45 @@
                 android:layout_marginStart="48dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="48dp"
-                android:layout_marginBottom="16dp"
                 android:background="@drawable/btn_gradient_red"
                 android:enabled="true"
                 android:text="@string/signup"
                 android:textAllCaps="false"
                 android:textColor="@color/probeis_background"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toTopOf="@id/googleButton"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <Button
-                android:id="@+id/googleButton"
-                android:layout_width="194dp"
+            <LinearLayout
+                android:id="@+id/findLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="48dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/btn_gradient_white"
-                android:enabled="false"
-                android:text="@string/action_sign_in_google"
-                android:textAllCaps="false"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/loginButton">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Ya fuiste a un evento?"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/signup_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Busca tus datos"
+                    android:textColor="@color/probeis_matte"
+                    android:textSize="18sp"
+                    android:onClick="findPlayer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

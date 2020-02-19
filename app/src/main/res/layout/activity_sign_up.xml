@@ -241,7 +241,7 @@
                     android:text="Busca tus datos"
                     android:textColor="@color/probeis_matte"
                     android:textSize="18sp"
-                    android:onClick="findPlayer"
+                    android:onClick="showFindPlayer"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/loginButton" />

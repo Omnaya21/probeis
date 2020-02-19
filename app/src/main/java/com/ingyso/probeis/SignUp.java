@@ -56,4 +56,9 @@ public class SignUp extends AppCompatActivity {
         }, year, month, day);
         dateDialog.show();
     }
+
+    public void showFindPlayer(View view) {
+        // We have to create another activity to find data from an event and create a player profile
+        // based on that information. Redirection to that activity from here
+    }
 }

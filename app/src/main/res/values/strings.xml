@@ -119,4 +119,5 @@
     </string-array>
     <string name="gender_male">Masculino</string>
     <string name="gender_female">Femenino</string>
+    <string name="text_select">Select</string>
 </resources>

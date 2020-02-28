@@ -60,4 +60,10 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(parentIntent);
         finish();
     }
+
+    public void showSignup(View view) {
+        Intent signupIntent = new Intent(getApplicationContext(), SignUp.class);
+        startActivity(signupIntent);
+        finish();
+    }
 }

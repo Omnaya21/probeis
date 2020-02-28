@@ -42,7 +42,7 @@
         android:layout_marginEnd="24dp"
         android:backgroundTint="@color/cardview_light_background"
         android:cursorVisible="true"
-        android:drawableLeft="@drawable/ic_person_white_24dp"
+        android:drawableStart="@drawable/ic_person_white_24dp"
         android:drawablePadding="8dp"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
@@ -62,7 +62,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="@color/cardview_light_background"
-        android:drawableLeft="@drawable/ic_lock_white_24dp"
+        android:drawableStart="@drawable/ic_lock_white_24dp"
         android:drawablePadding="8dp"
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
@@ -130,7 +130,7 @@
         app:layout_constraintTop_toBottomOf="@+id/extras" />
 
     <LinearLayout
-        android:id="@+id/registerLayout"
+        android:id="@+id/signupLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -146,31 +146,40 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/sgnup"
+            android:id="@+id/signup_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/signup_action"
             android:textColor="@color/probeis_matte"
             android:textSize="18sp"
+            android:onClick="showSignup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/loginButton" />
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/translucent_background"
+        app:layout_constraintBottom_toTopOf="@id/googleBtn" />
+
     <Button
-        android:id="@+id/intro"
+        android:id="@+id/googleBtn"
         android:layout_width="194dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/btn_gradient_white"
+        android:drawableStart="@drawable/google_logo_48"
+        android:drawablePadding="8dp"
         android:enabled="false"
+        android:gravity="center"
         android:minWidth="120dp"
-        android:text="Google"
+        android:text="@string/action_sign_in_google"
         android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
         android:textSize="25sp"

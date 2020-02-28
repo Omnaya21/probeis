@@ -12,7 +12,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -20,9 +19,9 @@ public class RecyclerViewMetricAdapter extends RecyclerView.Adapter<RecyclerView
     private static final String TAG = "RecyclerViewAdapter: Mt";
 
     // Vars
-    private ArrayList<String> mTitles = new ArrayList<>();
-    private ArrayList<String> mDescriptions = new ArrayList<>();
-    private ArrayList<String> mImageUrls = new ArrayList<>();
+    private ArrayList<String> mTitles;
+    private ArrayList<String> mDescriptions;
+    private ArrayList<String> mImageUrls;
     private Context mContext;
 
     public RecyclerViewMetricAdapter(Context context, ArrayList<String> titles, ArrayList<String> descriptions, ArrayList<String> imageUrls) {
@@ -35,7 +34,7 @@ public class RecyclerViewMetricAdapter extends RecyclerView.Adapter<RecyclerView
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Log.d(TAG, "Media - onCreateViewHolder: called");
+        Log.d(TAG, "Metrics - onCreateViewHolder: called");
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_metric_item, parent, false);
         return new ViewHolder(view);

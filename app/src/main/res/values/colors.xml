@@ -4,7 +4,8 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#BF5E5E</color>
 
-    <color name="translucent_background">#64000000</color>
+    <color name="pink">#F48FB1</color>
+    <color name="translucent_background">#32000000</color>
     <color name="cursor_color">#FFFFFF</color>
 
     <!-- colors for button style -->

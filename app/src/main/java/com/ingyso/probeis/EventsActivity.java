@@ -4,7 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -52,4 +58,25 @@ public class EventsActivity extends AppCompatActivity {
                 mImageUrls, mDates, mMapUrls, mQrUrls, mRegistered);
         recyclerView.setAdapter(adapter);
     }
+
+    public void showDialog(Activity activity, String msg){
+        final Dialog qrDialog = new Dialog(activity);
+        qrDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        qrDialog.setCancelable(false);
+        qrDialog.setContentView(R.layout.layout_event_qr);
+
+        TextView eventName = qrDialog.findViewById(R.id.event_name_dialog);
+        eventName.setText(msg);
+
+        ImageView backButton = qrDialog.findViewById(R.id.back_button_qr_dialog);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                qrDialog.dismiss();
+            }
+        });
+
+        qrDialog.show();
+    }
+
 }

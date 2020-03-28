@@ -1,10 +1,13 @@
 package com.ingyso.probeis;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +33,16 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
     private ArrayList<String> mQrUrls = new ArrayList<>();
     private ArrayList<Boolean> mRegistered = new ArrayList<>();
     private Context mContext;
+
+    OnItemClick onItemClick;
+
+    public void setOnItemClick(OnItemClick onItemClick) {
+        this.onItemClick = onItemClick;
+    }
+
+    public interface OnItemClick {
+        void getPosition(); //pass any things
+    }
 
     public RecyclerViewEventAdapter(Context context, ArrayList<String> names, ArrayList<String> descriptions,
             ArrayList<String> imageUrls, ArrayList<Calendar> dates, ArrayList<String> mapUrls,
@@ -84,12 +97,45 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
                 Toast.makeText(mContext, mNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
+        /*
+        holder.qr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog(this, "Codigo de Registro");
+            }
+        });*/
 
+        holder.qr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onItemClick.getPosition();
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return mNames.size();
+    }
+
+    public void showDialog(Activity activity, String msg){
+        final Dialog qrDialog = new Dialog(activity);
+        qrDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        qrDialog.setCancelable(false);
+        qrDialog.setContentView(R.layout.layout_event_qr);
+
+        TextView eventName = qrDialog.findViewById(R.id.event_name_dialog);
+        eventName.setText(msg);
+
+        ImageView backButton = qrDialog.findViewById(R.id.back_button_qr_dialog);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                qrDialog.dismiss();
+            }
+        });
+
+        qrDialog.show();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

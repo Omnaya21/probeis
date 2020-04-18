@@ -87,16 +87,17 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
         }
          */
 
-        holder.image.setImageResource(R.drawable.img5);
+        //holder.image.setImageResource(R.drawable.img5);
         holder.name.setText(mNames.get(position));
         holder.description.setText(mDescriptions.get(position));
-        holder.date.setText(mDates.get(position).toString());
-        holder.image.setOnClickListener(new View.OnClickListener() {
+        //holder.date.setText(mDates.get(position).toString());
+        /*holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(mContext, mNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
+         */
         /*
         holder.qr.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,12 +106,14 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
             }
         });*/
 
+        /*
         holder.qr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onItemClick.getPosition();
             }
         });
+         */
     }
 
     @Override
@@ -151,10 +154,10 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.event_title);
-            image = itemView.findViewById(R.id.event_image);
+            //image = itemView.findViewById(R.id.event_image);
             //map = itemView.findViewById(R.id.event_map);
             description = itemView.findViewById(R.id.event_description);
-            date = itemView.findViewById(R.id.event_date);
+            //date = itemView.findViewById(R.id.event_date);
             /*
             if (registered) {
                 qr = itemView.findViewById(R.id.event_qr_image);

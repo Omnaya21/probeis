@@ -68,12 +68,12 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        /*
+
         Glide.with(mContext)
                 .asBitmap()
                 .load(mImageUrls.get(position))
                 .into(holder.image);
-
+        /*
         Glide.with(mContext)
                 .asBitmap()
                 .load(mMapUrls.get(position))
@@ -87,9 +87,9 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
         }
          */
 
-        //holder.image.setImageResource(R.drawable.img5);
         holder.name.setText(mNames.get(position));
         holder.description.setText(mDescriptions.get(position));
+        //holder.image.setImageResource(R.drawable.img5);
         //holder.date.setText(mDates.get(position).toString());
         /*holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,7 +154,7 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.event_title);
-            //image = itemView.findViewById(R.id.event_image);
+            image = itemView.findViewById(R.id.event_image);
             //map = itemView.findViewById(R.id.event_map);
             description = itemView.findViewById(R.id.event_description);
             //date = itemView.findViewById(R.id.event_date);

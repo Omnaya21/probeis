@@ -38,8 +38,8 @@ public class EventsActivity extends AppCompatActivity {
         //Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
         mNames.add("Tijuana");
-        mImageUrls.add("https://www.probeis.mx/wp-content/uploads/campamento_2020-21_juego2_r.jpg");
-        //mImageUrls.add("https://www.probeis.mx/wp-content/uploads/israel_lopez_firma_rangers-750x455.jpg");
+        //mImageUrls.add("https://www.probeis.mx/wp-content/uploads/campamento_2020-21_juego2_r.jpg");
+        mImageUrls.add("https://live.staticflickr.com/65535/32785058047_32b3b63fb0.jpg");
         mDescriptions.add("Identificacion de talento en estadio Chevron");
         //mDates.add(Calendar.getInstance());
         mMapUrls.add("https://www.google.com.mx/url?sa=i&url=https%3A%2F%2Fwww.ydesignservices.com%2Fproduct%2Ffree-wordpress-plugins%2Fmultiple-location-google-map%2F&psig=AOvVaw1WzhbWiddWEQ4Og-Gny9u8&ust=1582190726341000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCUh_il3ecCFQAAAAAdAAAAABAU");
@@ -47,8 +47,8 @@ public class EventsActivity extends AppCompatActivity {
         mRegistered.add(true);
 
         mNames.add("Mexicali");
-        mImageUrls.add("https://www.probeis.mx/wp-content/uploads/campamento_2020-21_juego2_r.jpg");
-        //mImageUrls.add("https://www.probeis.mx/wp-content/uploads/israel_lopez_firma_rangers-750x455.jpg");
+        //mImageUrls.add("https://www.probeis.mx/wp-content/uploads/campamento_2020-21_juego2_r.jpg");
+        mImageUrls.add("https://www.probeis.mx/wp-content/uploads/israel_lopez_firma_rangers-750x455.jpg");
         mDescriptions.add("Identificacion de talento en estadio Mexicali");
         //mDates.add(Calendar.getInstance());
         mMapUrls.add("https://www.google.com.mx/url?sa=i&url=https%3A%2F%2Fwww.ydesignservices.com%2Fproduct%2Ffree-wordpress-plugins%2Fmultiple-location-google-map%2F&psig=AOvVaw1WzhbWiddWEQ4Og-Gny9u8&ust=1582190726341000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCUh_il3ecCFQAAAAAdAAAAABAU");

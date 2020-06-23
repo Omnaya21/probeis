@@ -109,7 +109,8 @@
                         android:layout_height="wrap_content"
                         android:padding="8dp"
                         android:scaleType="fitCenter"
-                        android:src="@drawable/qrcode_empty" />
+                        android:src="@drawable/qrcode_empty"
+                        android:visibility="visible" />
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>

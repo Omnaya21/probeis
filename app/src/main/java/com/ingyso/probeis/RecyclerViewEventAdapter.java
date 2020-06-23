@@ -3,6 +3,7 @@ package com.ingyso.probeis;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -67,75 +69,85 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        /*
+    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+
         Glide.with(mContext)
                 .asBitmap()
                 .load(mImageUrls.get(position))
                 .into(holder.image);
-
+        /*
         Glide.with(mContext)
                 .asBitmap()
                 .load(mMapUrls.get(position))
                 .into(holder.map);
-
-        if (mRegistered.get(position) == true) {
+        */
+        //if (mRegistered.get(position) == true) {
             Glide.with(mContext)
                     .asBitmap()
                     .load(mQrUrls.get(position))
                     .into(holder.qr);
-        }
-         */
+        //}
 
-        holder.image.setImageResource(R.drawable.img5);
         holder.name.setText(mNames.get(position));
         holder.description.setText(mDescriptions.get(position));
-        holder.date.setText(mDates.get(position).toString());
-        holder.image.setOnClickListener(new View.OnClickListener() {
+        //holder.image.setImageResource(R.drawable.img5);
+        //holder.date.setText(mDates.get(position).toString());
+
+        /*holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(mContext, mNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
-        /*
-        holder.qr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDialog(this, "Codigo de Registro");
-            }
-        });*/
+         */
+        holder.registered = mRegistered.get(position);
+        Toast.makeText(mContext, holder.name.getText(), Toast.LENGTH_SHORT).show();
+        if (holder.registered) {
+            //holder.qr.setVisibility(View.VISIBLE);
+            holder.qr.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //showDialog((Activity) mContext, "Código de Registro");
 
-        holder.qr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onItemClick.getPosition();
-            }
-        });
+                    AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                    View qrView = LayoutInflater.from(mContext).inflate(R.layout.layout_event_qr,null);
+
+                    TextView eventName = qrView.findViewById(R.id.event_name_dialog);
+                    eventName.setText(holder.name.getText());
+
+
+                    ImageView backButton = qrView.findViewById(R.id.back_button_qr_dialog);
+
+                    builder.setView(qrView);
+
+                    /*
+                    builder.setNegativeButton("back", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    }); */
+
+                    final AlertDialog alertDialog = builder.create();
+                    backButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            alertDialog.dismiss();
+                        }
+                    });
+                    alertDialog.show();
+                }
+            });
+        }
+        else {
+            //holder.qr.setVisibility(View.GONE);
+            // Registrar para el evento
+        }
     }
 
     @Override
     public int getItemCount() {
         return mNames.size();
-    }
-
-    public void showDialog(Activity activity, String msg){
-        final Dialog qrDialog = new Dialog(activity);
-        qrDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        qrDialog.setCancelable(false);
-        qrDialog.setContentView(R.layout.layout_event_qr);
-
-        TextView eventName = qrDialog.findViewById(R.id.event_name_dialog);
-        eventName.setText(msg);
-
-        ImageView backButton = qrDialog.findViewById(R.id.back_button_qr_dialog);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                qrDialog.dismiss();
-            }
-        });
-
-        qrDialog.show();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -147,22 +159,14 @@ public class RecyclerViewEventAdapter extends RecyclerView.Adapter<RecyclerViewE
         ImageView qr;
         Boolean registered;
 
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.event_title);
             image = itemView.findViewById(R.id.event_image);
             //map = itemView.findViewById(R.id.event_map);
             description = itemView.findViewById(R.id.event_description);
-            date = itemView.findViewById(R.id.event_date);
-            /*
-            if (registered) {
-                qr = itemView.findViewById(R.id.event_qr_image);
-                qr.setVisibility(View.VISIBLE);
-            }
-            else
-                qr.setVisibility(View.GONE);
-             */
+            //date = itemView.findViewById(R.id.event_date);
+            qr = itemView.findViewById(R.id.event_qr_image);
         }
     }
 }
